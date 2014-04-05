@@ -9,7 +9,7 @@ questo codice dovrebbe funzionare:
 
 finestra titolo: "titolo!" do
   aggiungi_sprite immagine: 'freccia_verde.png', 
-  	               positione: :centro, direzione: 90 do
+  	               posizione: :centro, direzione: 90 do
     quando_premo tasto: :su do
       avanza 10
     end
