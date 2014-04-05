@@ -5,6 +5,14 @@ module RScratch
       @y +=  Gosu::offset_y(@angle, n)
     end
 
+    def mostra
+      @mostra = true
+    end
+
+    def nascondi
+      @mostra = false
+    end
+
     def ruota v
       @angle += v
     end
