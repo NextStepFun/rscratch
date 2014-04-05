@@ -1,5 +1,6 @@
 module RScratch 
   class Sprite
+
     def avanza n
       @x +=  Gosu::offset_x(@angle, n)
       @y +=  Gosu::offset_y(@angle, n)
@@ -29,6 +30,10 @@ module RScratch
       @y = y
     end
 
+    def vai_a(x,y)
+      @x, @y = x, y
+    end
+
     def produci_suono(nome)
 
     end
@@ -44,5 +49,8 @@ module RScratch
         end
       end
     end
+
+    alias :larghezza :width
+    alias :altezza :height
   end
 end

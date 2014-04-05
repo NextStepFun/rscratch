@@ -9,6 +9,14 @@ module RScratch
       instance_eval(&block)
     end
 
+    def width
+      @image.width
+    end
+
+    def height
+      @image.height
+    end
+
     def draw
       @image.draw_rot(@x, @y, 1 , @angle) if @mostra
     end

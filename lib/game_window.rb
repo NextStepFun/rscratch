@@ -6,6 +6,7 @@ module RScratch
       self.caption = caption
       @sprites ||= []
       @registered_keys ||= {}
+      @to_draw = []
     end
 
     def sprites
@@ -14,11 +15,16 @@ module RScratch
 
     def draw
       @sprites.map(&:draw)
+      @to_draw.map(&:draw)
     end
 
     def register_key key, &block
       @registered_keys[key] ||= []
       @registered_keys[key].push block
+    end
+
+    def on_draw(&block)
+      @to_draw.push Drawable.new(&block)
     end
 
     def update
