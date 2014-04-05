@@ -1,7 +1,7 @@
 module RScratch 
   class GameWindow < Gosu::Window
-    def initialize(x,y,caption)
-      super x,y,false
+    def initialize(width,height,caption)
+      super width,height,false
       self.caption = caption
       @sprites ||= []
       @registered_keys ||= {}
