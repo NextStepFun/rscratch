@@ -13,6 +13,26 @@ module RScratch
       @mostra = false
     end
 
+    def cambia_x_di(x)
+      @x += x
+    end
+    
+    def cambia_y_di(y)
+      @y += y
+    end
+
+    def vai_dove_x_vale(x)
+      @x = x
+    end
+
+    def vai_dove_y_vale(y)
+      @y = y
+    end
+
+    def produci_suono(nome)
+
+    end
+
     def ruota v
       @angle += v
     end

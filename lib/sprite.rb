@@ -2,7 +2,7 @@ module RScratch
   class Sprite 
 
     def initialize(image:'', x:0, y:0, angle: angle, &block)
-      @image = Gosu::Image.new($window, "media/#{image}",  false)
+      @image = get_image(image) 
       @x, @y = x, y 
       @angle = angle
       @mostra = true

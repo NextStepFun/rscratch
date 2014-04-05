@@ -1,9 +1,9 @@
 require_relative 'dsl.rb'
 include RScratch
 
-finestra titolo: "titolo!" do
+finestra titolo: "Ruby Scratch!" do
 
-  aggiungi_sprite immagine: 'freccia_verde.png',
+  aggiungi_sprite immagine: 'cat1-a',
           posizione: :centro, direzione: 90 do
 
     quando_premo tasto: :su do
