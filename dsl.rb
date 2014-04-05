@@ -1,2 +1,3 @@
 require 'gosu'
-Dir[File.dirname(__FILE__) + '/lib/*.rb'].each {|file| require file }
+RSCRATCH_BASEDIR = File.dirname(__FILE__)
+Dir[RSCRATCH_BASEDIR + '/lib/*.rb'].each {|file| require file }
