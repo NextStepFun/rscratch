@@ -7,8 +7,8 @@ questo codice dovrebbe funzionare:
 
 ```ruby
 
-finestra titolo: "titolo!" do
-  aggiungi_sprite immagine: 'freccia_verde.png', 
+finestra titolo: "ruby scratch!" do
+  aggiungi_sprite immagine: 'cat1-a', 
   	               posizione: :centro, direzione: 90 do
 
     quando_premo tasto: :su do
