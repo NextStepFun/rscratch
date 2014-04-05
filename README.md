@@ -30,6 +30,9 @@ finestra titolo: "titolo!" do
 end
 ```
 
+questo dovrebbe essere il risultato:
+![screenshot](https://github.com/RavennaLUG/rscratch/raw/master/media/screenshot.png)
+
 
 ### Installazione
 se avete ruby (>=2.0) installato:
