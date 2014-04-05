@@ -1,5 +1,5 @@
 require_relative 'dsl.rb'
-include Finestra
+include RScratch
 
 finestra  x: 640, y:480, titolo: "titolo!" do
 

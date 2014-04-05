@@ -1,4 +1,4 @@
-module Finestra
+module RScratch
   def finestra(x: 640, y: 480, titolo:'')
     $window = GameWindow.new(x,y,titolo)
     yield if block_given?

@@ -1,4 +1,4 @@
-module Finestra
+module RScratch
   class Sprite 
     def initialize(image:'', x:0, y:0, angle: angle, &block)
       @image = Gosu::Image.new($window, "media/#{image}",  false)

@@ -1,4 +1,4 @@
-module Finestra
+module RScratch
   def gosu_key(str)
     case str
     when :su then Gosu::KbUp

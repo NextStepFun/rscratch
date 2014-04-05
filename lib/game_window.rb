@@ -1,4 +1,4 @@
-module Finestra
+module RScratch 
   class GameWindow < Gosu::Window
     def initialize(x,y,caption)
       super x,y,false

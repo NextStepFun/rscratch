@@ -1,4 +1,4 @@
-module Finestra
+module RScratch 
   class Sprite
     def avanza n
       @x +=  Gosu::offset_x(@angle, n)
