@@ -34,6 +34,26 @@ module RScratch
       @x, @y = x, y
     end
 
+    def dimensione(zoom)
+      @zoom = zoom
+    end
+
+    def rimpicciolisci(fattore)
+      @zoom /= fattore
+    end
+
+    def ingrandisci(fattore)
+      @zoom *= fattore
+    end
+
+    def guarda_a_sinistra
+      @show_left = true
+    end
+
+    def guarda_a_destra
+      @show_left = false
+    end
+
     def produci_suono(nome)
 
     end
