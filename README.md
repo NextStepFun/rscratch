@@ -38,9 +38,15 @@ questo dovrebbe essere il risultato:
 
 
 ### Installazione
-se avete ruby (>=2.0) installato:
 
+* installare ruby con [rbenv](https://github.com/sstephenson/rbenv) o [rvm](https://rvm.io/).
+* installare librsvg (opzionale, ma gli spirte vengono renderizzati
+  meglio)
+* installare [imagemagick](http://www.imagemagick.org/script/binary-releases.php)
+* installare le dipendenze con:
+```
 $ bundle install
+```
 
 ### Eseguire l'esempio
 $ ruby test.rb
