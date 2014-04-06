@@ -7,11 +7,11 @@ module RScratch
     end
 
     def mostra
-      @mostra = true
+      @show = true
     end
 
     def nascondi
-      @mostra = false
+      @show = false
     end
 
     def cambia_x_di(x)

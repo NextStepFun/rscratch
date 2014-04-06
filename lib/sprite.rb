@@ -5,7 +5,7 @@ module RScratch
       @image = get_image(image) 
       @x, @y = x, y 
       @angle = angle
-      @mostra = true
+      @show = true
       instance_eval(&block)
     end
 
@@ -18,7 +18,7 @@ module RScratch
     end
 
     def draw
-      @image.draw_rot(@x, @y, 1 , @angle) if @mostra
+      @image.draw_rot(@x, @y, 1 , @angle) if @show
     end
   end
 end
