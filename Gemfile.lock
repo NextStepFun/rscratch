@@ -1,17 +1,15 @@
-GIT
-  remote: https://github.com/rmagick/rmagick.git
-  revision: 79e1708c7f6792a3a90cb8cb3ffaeb74c58e092e
-  specs:
-    rmagick (2.13.2)
-
 GEM
   remote: http://rubygems.org/
   specs:
     gosu (0.7.50)
+    rmagick (2.15.4)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   gosu
-  rmagick!
+  rmagick
+
+BUNDLED WITH
+   1.10.6

@@ -1,4 +1,5 @@
-require 'RMagick'
+require 'rmagick'
+
 module RScratch
   def get_image(image_name, opts={})
     image = nil
