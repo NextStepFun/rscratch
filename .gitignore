@@ -10,6 +10,8 @@
 /tmp/
 .DS_Store
 
+# Don't enforce for the gem
+Gemfile.lock
 
 ## Specific to RubyMotion:
 .dat*

@@ -1,11 +1,12 @@
 module RScratch
-  def finestra(altezza: 640, larghezza: 480, titolo:'')
+
+  def _window(altezza: 640, larghezza: 480, titolo:'')
     $window = GameWindow.new(altezza,larghezza,titolo)
     yield if block_given?
     $window.show
   end
 
-  def sfondo_sfumato(da:0xFF1EB1FA, a:0xFF1D4DB5)
+  def _shaded_background(da:0xFF1EB1FA, a:0xFF1D4DB5)
     col1 = Gosu::Color.new(da)
     col2 = Gosu::Color.new(a)
     width = $window.width
