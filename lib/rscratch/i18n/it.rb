@@ -1,4 +1,0 @@
-translation = {
-  'window' => 'finestra',
-
-}

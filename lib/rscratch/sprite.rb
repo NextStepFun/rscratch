@@ -1,7 +1,7 @@
 module RScratch
   class Sprite 
 
-    def initialize(image:'', x:0, y:0, angle: angle, zoom: 1, rotate: :ruota, &block)
+    def initialize(image:'', x:0, y:0, angle: 0, zoom: 1, rotate: :ruota, &block)
       @image = get_image(image) 
       @image_left = get_image(image, flip: :horizontal)
       @zoom = zoom
