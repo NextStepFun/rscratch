@@ -1,14 +1,14 @@
 module RScratch
 
-  def _window(altezza: 640, larghezza: 480, titolo:'')
-    $window = GameWindow.new(altezza,larghezza,titolo)
+  def window(height: 640, width: 480, title:'')
+    $window = GameWindow.new(height,width,title)
     yield if block_given?
     $window.show
   end
 
-  def _shaded_background(da:0xFF1EB1FA, a:0xFF1D4DB5)
-    col1 = Gosu::Color.new(da)
-    col2 = Gosu::Color.new(a)
+  def shaded_background(from: 0xFF1EB1FA, to: 0xFF1D4DB5)
+    col1 = Gosu::Color.new(from)
+    col2 = Gosu::Color.new(to)
     width = $window.width
     height = $window.height
     $window.on_draw do
@@ -21,13 +21,13 @@ module RScratch
     end
   end
 
-  def aggiungi_sprite(immagine: '', y:0, x:0, posizione: nil, direzione: 90, dimensione: 1, rotazione: :ruota, &block)
-    sprite = Sprite.new(image:immagine, x:x, y:y, angle: direzione, zoom: dimensione, rotate: rotazione, &block)
-    if posizione == :centro
+  def add_sprite(image: '', y:0, x:0, position: nil, direction: 90, dimension: 1, rotation: :rotate, &block)
+    sprite = Sprite.new(image:image, x:x, y:y, angle: direction, zoom: dimension, rotation: rotation, &block)
+    if position == :center
       x = $window.height/2
       y = $window.width/2
     end
-    sprite.vai_a(x,y)
+    sprite.go_to(x,y)
     $window.sprites << sprite
     sprite
   end
