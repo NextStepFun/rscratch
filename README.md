@@ -33,10 +33,6 @@ window title: "Ruby Scratch!" do
   end
 ```
 
-This is how it should look:
-![screenshot](https://github.com/RavennaLUG/rscratch/raw/master/media/screenshot.png)
-
-
 ### Installation
 
 * install ruby using [rbenv](https://github.com/sstephenson/rbenv) or [rvm](https://rvm.io/).
