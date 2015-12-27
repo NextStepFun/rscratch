@@ -1,52 +1,47 @@
 rscratch
 ========
 
-Implementazione in ruby in lingua italiana dei comandi Scratch.
+Ruby implementation of Scratch game
 
-questo codice dovrebbe funzionare:
+This is an example:
 
 ```ruby
 
-finestra titolo: "Ruby Scratch!" do
+window title: "Ruby Scratch!" do
 
-  sfondo_sfumato
+  shaded_background
 
-  aggiungi_sprite immagine: 'cat1-a',
-          posizione: :centro, direzione: 0 do
+  add_sprite image: 'cat1-a',
+          position: :center, direction: 0 do
 
-    quando_premo tasto: :su do
-      cambia_y_di(-5) 
+   key_pressed key: :up do
+      change_y_of -5 
     end
 
-    quando_premo tasto: :destra do
-      cambia_x_di(5) 
+    key_pressed key: :right do
+      change_x_of 5 
     end
 
-    quando_premo tasto: :sinistra do
-      cambia_x_di(-5) 
+    key_pressed key: :left do
+      change_x_of -5
     end
 
-    quando_premo tasto: :giu do
-      cambia_y_di(5) 
+    key_pressed key: :down do
+      change_y_of 5
     end
 
   end
 ```
 
-questo dovrebbe essere il risultato:
-![screenshot](https://github.com/RavennaLUG/rscratch/raw/master/media/screenshot.png)
+### Installation
 
-
-### Installazione
-
-* installare ruby con [rbenv](https://github.com/sstephenson/rbenv) o [rvm](https://rvm.io/).
-* installare librsvg (opzionale, ma gli spirte vengono renderizzati
-  meglio)
-* installare [imagemagick](http://www.imagemagick.org/script/binary-releases.php)
-* installare le dipendenze con:
+* install ruby using [rbenv](https://github.com/sstephenson/rbenv) or [rvm](https://rvm.io/).
+* install librsvg (optional but improve sprite rendering)
+* install [imagemagick](http://www.imagemagick.org/script/binary-releases.php)
+* install other dependencies with:
 ```
 $ bundle install
 ```
 
-### Eseguire l'esempio
-$ ruby test.rb
+### Examples
+More examples can be found at [rscratch-examples](https://github.com/NextStepFun/rscratch-examples).

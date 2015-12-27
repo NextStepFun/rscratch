@@ -1,76 +1,73 @@
 module RScratch 
-  class Sprite
+  class Sprite 
 
-    def avanza n
+    def move n
       @x +=  Gosu::offset_x(@angle, n)
       @y +=  Gosu::offset_y(@angle, n)
     end
 
-    def mostra
+    def show 
       @show = true
     end
 
-    def nascondi
+    def hide
       @show = false
     end
 
-    def cambia_x_di(x)
+    def change_x_of(x)
       @x += x
     end
     
-    def cambia_y_di(y)
+    def change_y_of(y)
       @y += y
     end
 
-    def vai_dove_x_vale(x)
+    def go_where_x_is(x)
       @x = x
     end
 
-    def vai_dove_y_vale(y)
+    def go_where_y_is(y)
       @y = y
     end
 
-    def vai_a(x,y)
+    def go_to(x,y)
       @x, @y = x, y
     end
 
-    def dimensione(zoom)
+    def change_size_by(zoom)
       @zoom = zoom
     end
 
-    def rimpicciolisci(fattore)
-      @zoom /= fattore
+    def shrink(factor)
+      @zoom /= factor
     end
 
-    def ingrandisci(fattore)
-      @zoom *= fattore
+    def grow(factor)
+      @zoom *= factor
     end
 
-    def guarda_a_sinistra
+    def look_left
       @show_left = true
     end
 
-    def guarda_a_destra
+    def look_right
       @show_left = false
     end
 
-    def produci_suono(nome)
-
+    def make_sound(sound_name)
+      #TODO
     end
 
-    def ruota v
-      @angle += v
+    def rotate angle
+      @angle += angle
     end
 
-    def quando_premo(params = {}, &block)
-      if params[:tasto] 
-        $window.register_key params[:tasto] do
+    def key_pressed(params = {}, &block)
+      if params[:key] 
+        $window.register_key params[:key] do
           instance_eval(&block)
         end
       end
     end
-
-    alias :larghezza :width
-    alias :altezza :height
   end
 end
