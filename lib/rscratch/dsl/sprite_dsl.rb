@@ -1,5 +1,5 @@
 module RScratch 
-  class Sprite < DSL
+  class Sprite 
 
     def move n
       @x +=  Gosu::offset_x(@angle, n)
@@ -62,7 +62,7 @@ module RScratch
       @angle += angle
     end
 
-    def when_pressing(params = {}, &block)
+    def key_pressed(params = {}, &block)
       if params[:key] 
         $window.register_key params[:key] do
           instance_eval(&block)
