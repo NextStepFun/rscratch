@@ -1,5 +1,5 @@
 module RScratch 
-  class Sprite
+  class Sprite < DSL
 
     def move n
       @x +=  Gosu::offset_x(@angle, n)
