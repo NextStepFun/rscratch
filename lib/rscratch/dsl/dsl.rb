@@ -7,15 +7,15 @@ module RScratch
     end
 
     def method_missing m, **args, &block
-      if klass.tr?(m)
-        send(klass.tr(m),**klass.tr_args(m,args),&block)
+      if klass.translated?(m)
+        send(klass.translation(m),**klass.translate_args(m,args),&block)
       else 
         super(m,args,block)
       end
     end
 
     def respond_to?(m)
-      klass.tr?(m) || super(m)
+      klass.translated?(m) || super(m)
     end
 
     class << self
@@ -23,28 +23,28 @@ module RScratch
         translations[lang] = translation
       end
 
-      def tr?(m)
-        !!tr(m)
+      def translated?(m)
+        !!translation(m)
       end
 
-      def tr(m)
+      def translation(m)
         return m if LANG == :en
         translation_for(m)[:name]
       end
 
-      def tr_args(m,args)
+      def translate_args(m,args)
         return args if LANG == :en
-        args.reduce({}){|h,arr| h[tr_arg(m,arr[0])]=arr[1];h }
+        args.reduce({}){|h,arr| h[translate_arg(m,arr[0])]=arr[1];h }
       end
 
-      def tr_arg(m,arg)
-        raise "Argument #{arg} translation to #{LANG} missing" unless translation_for(m)[:args][arg]
+      def translate_arg(m,arg)
+        raise TranslationMissingError, "Argument #{arg} translation to #{LANG} missing" unless translation_for(m)[:args][arg]
         translation_for(m)[:args][arg]
       end
 
       def translation_for(m)
-        raise "Language missing" unless @translations.include?(LANG) 
-        raise "Method #{m} translation to #{LANG} missing" unless @translations[LANG].include?(m)
+        raise TranslationMissingError, "Language missing" unless @translations.include?(LANG) 
+        raise TranslationMissingError, "Method #{m} translation to #{LANG} missing" unless @translations[LANG].include?(m)
         @translations[LANG][m]
       end
 
@@ -54,4 +54,6 @@ module RScratch
     end
   end
 
+  class TranslationMissingError < Error
+  end
 end
