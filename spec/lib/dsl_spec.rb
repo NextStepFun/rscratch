@@ -22,7 +22,7 @@ describe RScratch::DSL do
 
   describe "Internationalized" do
      before do
-       RScratch::LANG = :it
+       RScratch::I18n.locale = :it
      end
 
      it { expect(dsl.respond_to?(:inverti)).to be true }
