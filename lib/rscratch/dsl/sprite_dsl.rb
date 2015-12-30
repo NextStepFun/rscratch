@@ -14,11 +14,11 @@ module RScratch
       @show = false
     end
 
-    def change_x_of(x)
+    def change_x_by(x)
       @x += x
     end
     
-    def change_y_of(y)
+    def change_y_by(y)
       @y += y
     end
 
