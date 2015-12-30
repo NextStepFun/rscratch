@@ -15,19 +15,19 @@ window title: "Ruby Scratch!" do
           position: :center, direction: 0 do
 
    key_pressed key: :up do
-      change_y_of -5 
+      change_y_by -5 
     end
 
     key_pressed key: :right do
-      change_x_of 5 
+      change_x_by 5 
     end
 
     key_pressed key: :left do
-      change_x_of -5
+      change_x_by -5
     end
 
     key_pressed key: :down do
-      change_y_of 5
+      change_y_by 5
     end
 
   end
